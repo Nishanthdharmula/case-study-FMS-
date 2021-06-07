@@ -1,0 +1,52 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand" class="btn btn-dark"><span class="material-icons">
+      flight
+      </span>Book Your Flight</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home" class="btn btn-dark">Home </a>
+      </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/try" class="nav-link" routerLink="try" class="btn btn-dark">Admin </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="/search-flight" class="nav-link" *ngIf="isLoggedIn" routerLink="search-flight" class="btn btn-dark"><span class="material-icons">
+          search
+          </span>Search Flights</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/s" class="nav-link" routerLink="s" class="btn btn-dark">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/l" class="nav-link" routerLink="l" class="btn btn-dark">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/p" class="nav-link" routerLink="p" class="btn btn-dark"><span class="material-icons">
+          person
+          </span>{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()" class="btn btn-dark">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+  
+
+  
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+
+

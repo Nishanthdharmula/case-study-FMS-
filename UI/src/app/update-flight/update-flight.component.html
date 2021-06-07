@@ -1,0 +1,59 @@
+<div class="col-md-6 offset-md-3">
+    <div class="card card-container shadow-lg p-3 mb-5 bg-grey rounded">
+        <div id="outside">
+        
+    <h3 class="font-weight-bold"> Update Flight </h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label> Flight Name</label>
+            <input type="text" required #flightName="ngModel" [class.is-invalid]="flightName.invalid && flightName.touched"  class ="form-control" id = "flightName"
+                [(ngModel)] = "flight.flightName" name = "flightName">
+                <small class="text-danger" [class.d-none]="flightName.valid || flightName.untouched">Flight Name required</small>
+        </div>
+    
+        <div class="form-group">
+            <label> From </label>
+            <input type="text"  required #from="ngModel" [class.is-invalid]="from.invalid && from.touched" class ="form-control" id = "from"
+                [(ngModel)] = "flight.from" name = "from">
+                <small class="text-danger" [class.d-none]="from.valid || from.untouched">From required</small>
+        </div>
+    
+        <div class="form-group">
+            <label> To </label>
+            <input type="text" required #to="ngModel" [class.is-invalid]="to.invalid && to.touched" class ="form-control" id = "to"
+                [(ngModel)] = "flight.to" name = "to">
+                <small class="text-danger" [class.d-none]="to.valid || to.untouched">To required</small>
+        </div>
+
+        <div class="form-group">
+            <label> Date </label>
+            <input type="date"  required #date="ngModel" [class.is-invalid]="date.invalid && date.touched" class ="form-control" id = "date"
+                [(ngModel)] = "flight.date" name = "date">
+                <small class="text-danger" [class.d-none]="date.valid || date.untouched">Date required</small>
+        </div>
+
+        <div class="form-group">
+            <label> Time </label>
+            <input type="time" required #time="ngModel" [class.is-invalid]="time.invalid && time.touched" class ="form-control" id = "time"
+                [(ngModel)] = "flight.time" name = "time">
+                <small class="text-danger" [class.d-none]="time.valid || time.untouched">Time required</small>
+        </div>
+
+        <div class="form-group">
+            <label> Price </label>
+            <input type="text" required #price="ngModel" [class.is-invalid]="price.invalid && price.touched" class ="form-control" id = "price"
+                [(ngModel)] = "flight.price" name = "price">
+                <small class="text-danger" [class.d-none]="price.valid || price.untouched">Price required</small>
+        </div>
+    
+        
+    
+        
+        <button  class = "btn btn-success"  (click)="updateFlights()" >Submit</button>
+    
+    </form>
+        
+    </div>
+    </div>
+    </div> 

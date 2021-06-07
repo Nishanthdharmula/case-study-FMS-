@@ -1,0 +1,55 @@
+
+    
+      <div class="panel panel-primary">
+        
+          <button type="button" class="custom-btn btn-10" style="margin-top: 20px"   >
+            <a href="review">Review</a></button>
+            <div class="card offer-card shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 20px;">
+      
+        
+        <div class="card-body">
+      <section style="border: 2px solid black; padding: 20px;">
+        <div class="panel-heading">
+            <h2>All Bookings </h2>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>BookingId</th>
+                <th>FlightId</th>
+                <th>First Name</th>
+                <th>PNR</th>
+                <th>Price</th>
+                <th>Action</th>
+              
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let booking of bookings |paginate: {itemsPerPage:10, currentPage:p};">
+                <td>{{booking.bookingId}}</td>
+                <td>{{ booking.flightId}}</td>
+                <td>{{ booking.firstNames}}</td>
+                <td>{{ booking.pnr}}</td>
+                <td>{{ booking.bookingAmount}}</td>
+                
+                <td>
+                  <button (click) = "deleteBookings(booking.bookingId)" class = "btn btn-danger">Cancel </button>
+                </td>
+                
+                
+              </tr>
+            </tbody>
+          </table>
+          <pagination-controls (pageChange)="p =$event"></pagination-controls>
+        </div>
+      </section>
+        </div>
+      </div>
+      </div>
+    
+    
+       
+             
+    
+    

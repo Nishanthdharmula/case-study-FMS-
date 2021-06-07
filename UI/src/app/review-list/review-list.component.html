@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+  <div class="card offer-card shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="card-body">
+  <section style="border: 2px solid black; padding: 20px;">
+    <div class="panel-heading">
+        <h2>All Ratings </h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>UserName</th>
+            <th>Rating</th>
+            <th>Feedback</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let review of reviews">
+            <td>{{ review.username}}</td>
+            <td>{{ review.rating}}</td>
+            <td>{{ review.feedback}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+    </div>
+  </div>
+  </div>

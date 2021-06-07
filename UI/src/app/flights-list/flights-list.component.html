@@ -1,0 +1,52 @@
+
+<div style="text-align: center" id="b">
+<input type="text" [(ngModel)]="searchFlightName" placeholder="Flight Name">
+</div>
+<div class="panel panel-primary">
+  <div class="card offer-card shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="card-body" style="text-align: center;">
+  <section style="border: 2px solid black; padding: 20px;">
+    <div class="panel-heading">
+        <h2>All Flight </h2>
+    </div>
+    <div class="panel-body" style="text-align: center;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>FlightName</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Price</th>
+            <th> Actions </th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of flights | filter:searchFlightName  |paginate: {itemsPerPage:5, currentPage:p};">
+            <td>{{ flight.flightName}}</td>
+            <td>{{ flight.from}}</td>
+            <td>{{ flight.to}}</td>
+            <td>{{ flight.date}}</td>
+            <td>{{ flight.time}}</td>
+            <td>{{ flight.price}}</td>
+            <td>
+              <button  (click) = "updateFlight(flight.flightId)" class = "btn btn-info" > <span class="material-icons">
+                edit
+                </span> </button>
+                <button class = "btn btn-danger" style="margin-top: 15px;" (click)="deleteFlights(flight.flightId)"><span class="material-icons">delete
+                  </span> </button>
+              
+
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="p =$event"></pagination-controls>
+    </div>
+  </section>
+    </div>
+  </div>
+  </div>

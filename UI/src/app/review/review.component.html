@@ -1,0 +1,37 @@
+<div class="col-md-6 offset-md-3">
+    
+    <div class="card card-container shadow-lg p-3 mb-5 bg-black rounded">
+        <div id="outside">
+    <h3 class="font-weight-bold"> Review </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+    
+        <div class="form-group">
+            <label> Username </label>
+            <input type="text" required  #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class ="form-control" id = "username"
+                [(ngModel)] = "review.username" name = "username">
+                <small class="text-danger" [class.d-none]="username.valid || username.untouched">User Name required</small>
+        </div>
+
+        <div class="form-group">
+            <label> Rating </label>
+            <input type="number" required max="5" min="1" #rating="ngModel" [class.is-invalid]="rating.invalid && rating.touched" class ="form-control" id = "rating"
+                [(ngModel)] = "review.rating" name = "firstName">
+                <small class="text-danger" [class.d-none]="rating.valid || rating.untouched">give Rating</small>
+        </div>
+    
+        <div class="form-group">
+            <label> Feedback </label>
+            <input type="text" required #feedback ="ngModel" [class.is-invalid]="feedback.invalid && feedback.touched" class ="form-control" id = "feedback "
+                [(ngModel)] = "review.feedback " name = "feedback ">
+                <small class="text-danger" [class.d-none]="feedback.valid || feedback.untouched">Describe your feedback</small>
+        </div>
+
+        <button class = "btn btn-success" type ="submit">Submit</button>
+
+    </form>
+            
+        
+      </div>
+      </div>
+    </div> 

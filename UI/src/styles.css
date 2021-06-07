@@ -1,0 +1,195 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/*@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=open+sans:800);
+
+.text{
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1){
+  stroke: #F2385A;
+  animation-delay: -1.2s;
+}
+
+.text:nth-child(5n + 2){
+stroke: #F5A503;
+animation-delay: -2.4s;
+} 
+.text:nth-child(5n + 3){
+  stroke: #E9F1DF;
+  animation-delay: -3.6s;
+  } 
+
+  .text:nth-child(5n + 4){
+    stroke: #56D9CD;
+    animation-delay: -4.8s;
+    }
+    
+    .text:nth-child(5n + 5){
+      stroke: #3AA1BF;
+      animation-delay: -6s;
+      } 
+
+      @keyframes stroke{
+        100%{
+          stroke-dashoffset: -400;
+        }
+      }
+
+      html, body{
+        height:100%;
+      }
+
+      body{
+        background: #111;
+        background-size: .2em 100%;
+        font: 14.5em/1 opens Sans, Impact ;
+        text-transform: uppercase;
+        margin: 0;
+      }*/
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+    color: #369; 
+    font-family: Arial, Helvetica, sans-serif;   
+    font-size: 250%;
+  }
+  h2, h3 { 
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;   
+    font-weight: lighter;
+  }
+  body { 
+    margin: 2em; 
+  }
+  body, input[text], button { 
+    color: #888; 
+    font-family: Cambria, Georgia; 
+  }
+  a {
+    cursor: pointer;
+    cursor: hand;
+  }
+  button {
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #aaa; 
+    cursor: auto;
+  }
+  
+  /* Navigation link styles */
+  nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  nav a:visited, a:link {
+    color: #607D8B;
+  }
+  nav a:hover {
+    color: #039be5;
+    background-color: #CFD8DC;
+  }
+  nav a.active {
+    color: #039be5;
+  }
+  
+  /* items class */
+  .items {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding-left: 0;
+    width: 10em;
+  }
+  .items li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  .items li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+  .items li.selected:hover {
+    background-color: #BBD8DC;
+    color: white;
+  }
+  
+  .items .text {
+    position: relative;
+    top: -3px;
+  }
+  
+  .items li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  
+  .items .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  .items li.selected {
+    background-color: #CFD8DC;
+    color: white;
+  }
+  /* everywhere else */
+  * { 
+    font-family: Arial, Helvetica, sans-serif; 
+  }
+
+  .mat-typography{
+    background-attachment: fixed;
+  }
+
+
+ /* main{
+    text-align: center;
+    position: relative;
+  }*/
+
+  

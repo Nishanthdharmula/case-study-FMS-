@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+    <div class="card offer-card shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="card-body">
+    <section style="border: 2px solid black; padding: 20px;">
+      <div class="panel-heading">
+          <h2>All Flight </h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>FareNum</th>
+              <th>BookingId</th>
+              <th>BookingAmount</th>
+              
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let fare of fares">
+              <td>{{ fare.farenum}}</td>
+              <td>{{ fare.bookingId}}</td>
+              <td>{{ fare.bookingfare}}</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+      </div>
+    </div>
+    </div>

@@ -1,0 +1,41 @@
+
+  
+  <div class="panel panel-primary" style="margin-top: 35px;">
+    <div class="card offer-card shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="card-body">
+    <section style="border: 2px solid black; padding: 20px;">
+      <div class="panel-heading">
+          <h2>All Flight </h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>FlightName</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Price</th>
+              
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let flight of flights | filter:searchFlightName  |paginate: {itemsPerPage:10, currentPage:p};">
+              <td>{{ flight.flightName}}</td>
+              <td>{{ flight.from}}</td>
+              <td>{{ flight.to}}</td>
+              <td>{{ flight.date}}</td>
+              <td>{{ flight.time}}</td>
+              <td>{{ flight.price}}</td>
+              
+            </tr>
+          </tbody>
+        </table>
+        <pagination-controls (pageChange)="p =$event"></pagination-controls>
+      </div>
+    </section>
+      </div>
+    </div>
+    </div>

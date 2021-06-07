@@ -1,0 +1,97 @@
+<div >
+    <div class="col-md-6 offset-md-3" id="b">
+        
+        <button type="button" class="btn btn-Accent loginBtn">
+            <a href="log">Login</a>
+          </button>
+          <div class="card offer-card shadow-lg p-3 mb-5 bg-white rounded">
+    
+            <div id="outside">
+          <section style="border: 2px solid black; padding: 20px;">
+        <h3 class="font-weight-bold"> Sign Up </h3>
+        
+        <form (ngSubmit) = "onSubmit()">
+        
+            <div class="form-group">
+                <label> User Name</label>
+                <input type="text" required minlength="4" #userName="ngModel"  [class.is-invalid]="userName.invalid && userName.touched" class ="form-control" id = "userName"
+                    [(ngModel)] = "user.userName" name = "userName">
+                    <div class="text-danger" *ngIf="userName.invalid && (userName.dirty  || userName.touched)">
+                    <div *ngIf="userName.errors.required">
+                        Name is required.
+                      </div>
+                      <div *ngIf="userName.errors.minlength">
+                        Name must be at least 4 characters long.
+                      </div>
+                    </div>
+            </div>
+        
+            <div class="form-group">
+                <label> First Name </label>
+                <input type="text" required #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched" class ="form-control" id = "firstName"
+                    [(ngModel)] = "user.firstName" name = "firstName">
+                    <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">First Name required</small>
+            </div>
+        
+            <div class="form-group">
+                <label> Last Name </label>
+                <input type="text" required #lastName="ngModel" [class.is-invalid]="lastName.invalid && lastName.touched" class ="form-control" id = "lastName"
+                    [(ngModel)] = "user.lastName" name = "lastName">
+                    <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">Last Name required</small>
+            </div>
+    
+            <div class="form-group">
+                <label> Password</label>
+                <input type="password" required minlength="8" #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class ="form-control" id = "password"
+                    [(ngModel)] = "user.password" name = "password">
+                    <div class="text-danger" *ngIf="password.invalid && (password.dirty  || password.touched)">
+                    <div *ngIf="password.errors.required">
+                        Password is required.
+                      </div>
+                      <div *ngIf="password.errors.minlength">
+                        Password must be at least 8 characters long.
+                      </div>
+                    </div>
+            </div>
+    
+            <div class="form-group">
+                <label> Email </label>
+                <input type="email" required minlength="10" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" class ="form-control" id = "email"
+                    [(ngModel)] = "user.email" name = "email">
+                    <div class="text-danger" *ngIf="email.invalid && (email.dirty  || email.touched)">
+                    <div *ngIf="email.errors.required">
+                        Email is required.
+                      </div>
+                      <div *ngIf="email.errors.minlength">
+                        Email must be at least 8 characters long.
+                      </div>
+                    </div>
+            </div>
+    
+    
+            <div class="form-group">
+                <label> Roles </label>
+                <input type="text" required #role="ngModel" [class.is-invalid]="role.invalid && role.touched" class ="form-control" id = "role"
+                    [(ngModel)] = "user.role" name = "role">
+                    <small class="text-danger" [class.d-none]="role.valid || role.untouched">Roles required</small>
+            </div>
+    
+            <div class="form-group">
+                <label> Active </label>
+                <input type="text" required #active="ngModel" [class.is-invalid]="active.invalid && active.touched" class ="form-control" id = "time"
+                    [(ngModel)] = "user.active" name = "active">
+                    <small class="text-danger" [class.d-none]="active.valid || active.untouched">Active required</small>
+            </div>
+    
+    
+            <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    
+        
+        </form>
+        
+          </section>
+          </div>
+          </div>
+          </div>
+        </div> 

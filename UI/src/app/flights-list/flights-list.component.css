@@ -1,0 +1,88 @@
+.addFlightsBtn{
+    margin-top: 25px;
+    height: 50px;
+    width: 150px;
+    border-radius: 0;
+  }
+
+  .review-listBtn{
+    margin-top: 25px;
+    height: 50px;
+    width: 150px;
+    border-radius: 0;
+  }
+  .offer-card{
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
+  #b{
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .btn-info { 
+
+    width: 46px;
+    height: 40px;
+  }
+
+  .btn-danger { 
+
+    width: 50px;
+    height: 38px;
+  }
+
+  button {
+    margin: 20px;
+    }
+    .custom-btn {
+    width: 160px;
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    /*background: transparent;*/
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    font-size: 20px;
+    }
+    .btn-10 {
+    background: rgba(19, 165, 190, 0.185);
+    background: linear-gradient(0deg, rgba(22, 81, 148, 0.226) 0%, rgba(49,110,244,1) 100%);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    }
+    .btn-10:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(.1);
+    transform: scale(.1);
+    }
+    .btn-10:hover {
+    color: #fff;
+    border: none;
+    background: transparent;
+    }
+    .btn-10:hover:after {
+    background: rgba(77, 142, 240, 0.527);
+    background: linear-gradient(0deg, rgba(236, 242, 245, 0.479) 0%,  rgba(0,3,255,1)100%);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    }

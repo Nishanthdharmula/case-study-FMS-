@@ -1,0 +1,67 @@
+<div class="col-md-6 offset-md-3" style="margin-top: 25px" >
+  <button type="button" class="custom-btn btn-10"   >
+      <a href="Booking-list">Booking List</a>
+    </button>
+    <button type="button" class="custom-btn btn-10" style="margin-left: 20px"   >
+      <a href="review">Review</a></button>
+      <div class="card card-container shadow-lg p-3 mb-5 bg-grey rounded" style="margin-top: 20px">
+      <div id="outside">
+      
+  <h3 class="font-weight-bold"> Booking </h3>
+  <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Flight Id </label>
+            <input readonly type="text" required #id="ngModel" [class.is-invalid]="id.invalid && id.touched" class ="form-control" id = "id"
+                [(ngModel)] = "booking.flightId" name = "id" value="id">
+                <small class="text-danger" [class.d-none]="id.valid || id.untouched">First Name required</small>
+        </div>
+
+      <div class="form-group">
+        <label> First Name </label>
+        <input type="text" required #firstNames="ngModel" [class.is-invalid]="firstNames.invalid && firstNames.touched" class ="form-control" id = "firstNames"
+            [(ngModel)] = "booking.firstNames" name = "firstNames">
+            <small class="text-danger" [class.d-none]="firstNames.valid || firstNames.untouched">First Name required</small>
+    </div>
+
+    <div class="form-group">
+        <label> Last Name </label>
+        <input type="text" required #lastNames="ngModel" [class.is-invalid]="lastNames.invalid && lastNames.touched" class ="form-control" id = "lastNames"
+            [(ngModel)] = "booking.lastNames" name = "lastNames">
+            <small class="text-danger" [class.d-none]="lastNames.valid || lastNames.untouched">Last Name required</small>
+    </div>
+
+    <div class="form-group">
+      <label> contact </label>
+      <input type="text" required minlength="10" maxlength="12" #contact="ngModel" [class.is-invalid]="contact.invalid && contact.touched" class ="form-control" id = "contact"
+            [(ngModel)] = "booking.contact" name = "Phone">
+          <div class="text-danger" *ngIf="contact.invalid && (contact.dirty  || contact.touched)">
+          <div *ngIf="contact.errors.required">
+              contact Number is required.
+            </div>
+            <div *ngIf="contact.errors.minlength">
+              Number must be atleast 10 digits long.
+            </div>
+            <div *ngIf="contact.errors.maxlength">
+              Number must not be more than 12 digits long.
+            </div>
+          </div>
+  </div>
+
+  <div>
+    <label for="Gender">Gender</label>
+    <p>
+      <input type="radio" name="gender" value="male" [(ngModel)] = "booking.gender" > Male<br>
+      <input type="radio" name="gender" value="female" [(ngModel)] = "booking.gender"> Female<br>
+      <input type="radio" name="gender" value="other" [(ngModel)] = "booking.gender"> Other
+    </p>
+  </div>
+
+        <button class = "btn btn-success"  type="submit"   (click)="addBookings()" >Continue Booking</button>
+
+    
+    </form>
+        
+      </div>
+      </div>
+    </div> 

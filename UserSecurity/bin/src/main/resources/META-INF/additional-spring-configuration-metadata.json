@@ -1,0 +1,77 @@
+{"properties": [
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtExpirationMs'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtExpirationMs'"
+  },
+  {
+    "name": "jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtExpirationMs'"
+  },
+  {
+    "name": "jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtExpirationMs'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  },
+  {
+    "name": "jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwtSecret'"
+  }
+]}
